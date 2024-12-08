@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS, JSON, CSV</title>
+    <style>
+        div {
+            width: 600px;
+            height: 70px;
+            border: solid 1pt burlywood;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        #formid {
+
+            padding: 20px;
+            margin: 10px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <section id="formid">
+        <h1>JS, JSON, CSV</h1>
+        <h2>Converting JSON text to Javascript Object</h2>
+        <div id="jsonToJS"></div>
+        <h2>Converting Javascript to Date Object</h2>
+        <div id="jsonDate"></div>
+        <h2>Converting JSON to CSV & CSV to JSON</h2>
+        <div id="jsonCSV"></div>
+        <button onclick="jsonToCSV()">Convert JSON TO CSV</button>
+        <div id="CSVTojson"></div>
+        <button onclick="CSVtojson()">Convert CSV to JSON</button>
+        <h2>Generating hash using Crypto</h2>
+        <label for="ipStr">Enter a string to hash: </label>
+        <input type="text" id="ipStr" /><br>
+        <button onclick="hash()">Generate Hash</button><br>
+        <div id="taHash"></div>
+    </section>
+
+
+<script>
+    const jsonData = '{"course":{"code":"BCSL504","cname":"Web Tech Lab"}}';
+    var jsobj = JSON.parse(jsonData);
+    document.getElementById("jsonToJS").innerHTML = jsobj.course.code + " " + jsobj.course.cname;
+
+    var text = '{"cname":"Web Tech Lab","start_date":"2024-09-17","end_date":"2024-12-26"}';
+    var c = JSON.parse(text);
+    var sdate = new Date(c.start_date);
+    var edate = new Date(c.end_date);
+    var format = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("jsonDate").innerHTML = sdate.toLocaleDateString("en-US", format) + "<br>" + edate.toLocaleDateString("en-US", format);
+
+    function jsonToCSV() {
+        var jsonData = [
+            { "id": 1, "usn": "1CR21CS001", "sname": "Anna", "semester": 5, "dept": "CSE" },
+            { "id": 2, "usn": "1CR21EC003", "sname": "Max", "semester": 5, "dept": "ECE" }
+        ];
+        let csv = '';
+        const headers = Object.keys(jsonData[0]);
+        csv += headers.join() + "\n";
+        jsonData.forEach(obj => {
+            const values = headers.map(header => obj[header]);
+            csv += values.join() + "\n";
+        });
+        document.getElementById("jsonCSV").innerHTML = csv;
+    }
+
+    function CSVtojson() {
+        var csv = document.getElementById("jsonCSV").innerHTML.trim();
+        const rows = csv.split("\n");
+        const headers = rows[0].split(",");
+        const jsonData = [];
+        for (let i = 1; i < rows.length; i++) {
+            const values = rows[i].split(",");
+            const obj = {};
+            for (let j = 0; j < headers.length; j++) {
+                const key = headers[j];
+                const value = values[j];
+                obj[key] = value;
+            }
+            jsonData.push(obj);
+        }
+        document.getElementById("CSVTojson").innerHTML = JSON.stringify(jsonData);
+    }
+
+    function hash() {
+        const a = document.getElementById("ipStr").value;
+        let hash = 0;
+        for (let i = 0; i < a.length; i++) {
+            const char = a.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash; // Convert to 32bit integer
+        }
+        document.getElementById("taHash").innerHTML = hash;
+    }
+</script>
+
+</body>
+</html>

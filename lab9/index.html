@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color.js"></script>
+
+</head>
+<body>
+    <h1>MY WEB PAGE</h1>
+    <button id="jj">append</button>
+    <p id="pp">THE FEATURES OF HTMLARE ARE</p>
+    <ul id="ull">
+        <li>HTML </li>
+        <li>CSS</li>
+    </ul>
+    
+    <script>
+        $('#jj').click(function(){
+            $('#pp').append("<br>This featueres are");
+            $('#ull').append("<br>HTML");
+        });
+    </script>
+
+<button id="iq">increase</button>
+<button id="dq">decrease</button>
+<div id="jjq">JQUERY</div>
+
+<script>
+    $('#iq').click(function(){
+        $('#jjq').animate({
+            fontSize:"+=4px"
+        });
+    });
+</script>
+
+<script>
+    $('#dq').click(function(){
+        $('#jjq').animate({
+            fontSize:"-=4px"
+        });
+    });
+</script>
+
+
+<input type="color" id="cl">
+<button id="clu">change</button>
+<div id="chd" style="width: 200px; height: 200px; border: 1px solid black;"></div>
+
+<script>
+    $('#clu').click(function(){
+        $('#chd').animate({
+            backgroundColor : $('#cl').val()
+        } ,"slow" );
+    });
+</script>
+
+
+</body>
+</html>

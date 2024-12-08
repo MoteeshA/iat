@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            border: 1px solid black;
+            width: 500px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AJAX AND JQURY</h1>
+    <h2>load data using ajax without using jquery</h2>
+    <button onclick="load()">LOAD CONTENT</button>
+    <div id="jj"></div>
+
+    <script>
+        function load(){
+            var xhr=new XMLHttpRequest();
+            xhr.onload=function(){
+                if(xhr.status==200){
+                    document.getElementById('jj').innerHTML=xhr.responseText;
+                }
+            };
+            xhr.open('GET','con.txt',true);
+            xhr.send();
+        }
+    </script>
+    <h2>load content using ajax wwith query</h2>
+    <buttion id="jjj">LOAD</buttion>
+    <div id="jjq"></div>
+
+    <script>
+        $('#jjj').click(function(){
+            $.get('con.txt',function(result){
+                $('#jjq').html(result);
+            });
+        });
+    </script>
+
+
+<h2>GET BY JSON </h2>
+<buttion id="jjjj">LOAD</buttion>
+<div id="jjqq"></div>
+
+<script>
+    $('#jjjj').click(function(){
+        $.get('student.json',function(data){
+            $('#jjqq').html("Name: "+data.sname);
+        });
+    });
+</script>
+
+<h2>Parse JSon</h2>
+<buttion id="jjjjj">LOAD</buttion>
+<div id="jjqqq"></div>
+
+<script>
+    $('#jjjjj').click(function(){
+        var j='{"name":"raju"}';
+        var jj=JSON.parse(j);
+        $('#jjqqq').html("Name: "+jj.name);
+    });
+</script>
+    
+</body>
+</html>
