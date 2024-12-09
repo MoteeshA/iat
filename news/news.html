@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newspaper</title>
+<style>
+#container {
+    width: 98%;
+    overflow: auto;
+    margin: auto;
+    background-image: linear-gradient(#25addf, #E4E0E1);
+}
+header {
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 13px;
+    text-align: center;
+}
+nav li a:hover {
+    background-color: #888;
+}
+section {
+    width: 68%;
+    margin: 5px;
+    float: left;
+    padding: 5px;
+    border: solid 1pt black;
+    background-color: #AB886D;
+}
+aside {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 28%;
+    position: inherit;
+    border: solid 1pt black;
+    vertical-align: top;
+    border: dotted 2px #D6C0B3;
+    background-image: radial-gradient(#E2BFB3, #AB886D);
+}
+footer {
+    margin-top: 10px;
+    width: 95%;
+    margin: auto;
+    height: 30px;
+    background-color: #E2BFB3;
+    text-align: center;
+}
+figure {
+    float: left;
+    margin-top: 0;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: solid 1pt black;
+    background-color: #AB886D;
+}
+figcaption {
+    text-align: center;
+    color: #EDDFE0;
+    font-weight: bold;
+}
+article {
+    height: 200px;
+    overflow: auto;
+    text-align: justify;
+    background-color: #E4E0E1;
+    margin: 5px;
+    padding: 5px;
+}
+h1, h2, h3 {
+    color: #493628;
+    text-shadow: 1px 1px #D6C0B3;
+}
+a {
+    text-shadow: none;
+}
+ul {
+    list-style: square;
+}
+hgroup {
+    background-color: #EDDFE0;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<header>
+    <img src="TOI.png" alt="The Times of India" width="500px" />
+    <nav role="navigation">
+        <ul>
+            <li><a href="#">City</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Tech</a></li>
+            <li><a href="#">Cricket</a></li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <h2>Latest News</h2>
+    <article>
+        <h3>How Cyclone Dana, expected to hit Odisha, got its name</h3>
+        <figure>
+            <img src="cyclone.JPG" alt="Cyclone Dana" width="200px" />
+            <figcaption>Cyclone Dana</figcaption>
+        </figure>
+        Named by Saudi Arabia, Dana means 'generosity.' The cyclone is predicted to intensify and approach the Odisha-West Bengal coast by October 24. Cyclone Dana, a tropical cyclone that formed in the Indian Ocean, is expected to cause heavy rains in Odisha in the coming days. But have you ever wondered how cyclones get their names?
+    </article>
+    <article>
+        <h3>‘I won the Oscars, but now, who cares?’: AR Rahman no longer feels the need to prove himself</h3>
+        <figure>
+            <img src="ar.JPG" alt="A R Rahman" width="200px" />
+            <figcaption>AR Rahman</figcaption>
+        </figure>
+        Music composer AR Rahman has delivered numerous hits in Tamil, Hindi, Telugu, Malayalam, English, and other languages since the 1990s. In an interview with *The Week*, he says that he’s not only prioritising projects that ‘bring him joy’.
+    </article>
+</section>
+<section id="tech">
+    <h2>Technology</h2>
+    <article>
+        <h3>Can artificial intelligence rescue customer service?</h3>
+        <figure>
+            <img src="ai.JPG" alt="AI" width="200px" />
+            <figcaption>Artificial Intelligence</figcaption>
+        </figure>
+        It’s not easy being a customer service agent—particularly when those customers are so angry with a product that they want to yell at you on the phone. That’s the sort of rage that Sonos, a maker of home audio systems, encountered in May when it released an app update so full of glitches it caused its share price to plunge.
+    </article>
+    <article>
+        <h3>Best smart home devices to buy in 2024</h3>
+        <figure>
+            <img src="smarthome.JPG" alt="Smart Home Devices" width="200px" />
+            <figcaption>Smart Home Devices</figcaption>
+        </figure>
+        Smart home technology continues to evolve, with new devices offering enhanced convenience, security, and energy efficiency. From intelligent thermostats to voice-activated speakers, these devices make our lives easier and more connected than ever before.
+    </article>
+</section>
+<aside>
+    <h3>Advertisement</h3>
+    <p>Check out the latest tech deals at amazing discounts!</p>
+</aside>
+<footer>
+    <p>&copy; 2024 The Times of India - All Rights Reserved</p>
+</footer>
+</div>
+</body>
+</html>
