@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #666;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        /* Article Styling */
+        article {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        article h2 {
+            color: #1a1a1a;
+            font-size: 1.5em;
+        }
+
+        article p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: #ffebcd;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            color: #444;
+            font-size: 1.1em;
+        }
+
+        /* Aside Styling */
+        aside {
+            background-color: #e0f7fa;
+            padding: 20px;
+            margin: 20px;
+            width: 30%;
+            float: right;
+            border-radius: 8px;
+            color: #00796b;
+        }
+
+        aside h3 {
+            font-size: 1.2em;
+            color: #004d40;
+        }
+
+        /* Figure Styling */
+        figure {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        table caption {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        /* Responsive Styling */
+        @media screen and (max-width: 768px) {
+            aside {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Newspaper</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#main-article">Main Article</a>
+        <a href="#important-section">Important Section</a>
+        <a href="#related-info">Related Information</a>
+        <a href="#another-article">Another Article</a>
+    </nav>
+
+    <main>
+        <!-- Main Article -->
+        <article id="main-article">
+            <h2>Main Article Heading</h2>
+            <p>This is the main content of the article. It provides a detailed explanation of the topic of the day. The article might include different sections with a range of media like images or videos.</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/600x400" alt="Newspaper Image" width="600">
+                <figcaption>Figure 1: A related image for the article.</figcaption>
+            </figure>
+        </article>
+
+        <!-- Section for Additional Details -->
+        <section id="important-section">
+            <h2>Important Section</h2>
+            <p>This section includes important details that complement the main article. It provides additional insights, facts, or data that might help in understanding the overall topic better.</p>
+        </section>
+
+        <!-- Aside for Related Content -->
+        <aside id="related-info">
+            <h3>Related Information</h3>
+            <p>This aside contains related content such as side notes, links to related articles, or references. It could also feature advertisements or additional resources.</p>
+        </aside>
+
+        <!-- Another Article -->
+        <article id="another-article">
+            <h2>Another Article</h2>
+            <p>This is another article with different content. It might discuss a new topic but is presented in the same format for consistency.</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/600x400" alt="Another Article Image" width="600">
+                <figcaption>Figure 2: A related image for the second article.</figcaption>
+            </figure>
+        </article>
+
+        <!-- Table Example -->
+        <table>
+            <caption>Table of Contents</caption>
+            <thead>
+                <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                    <th>Heading 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Content 1</td>
+                    <td>Content 2</td>
+                    <td>Content 3</td>
+                </tr>
+                <tr>
+                    <td>Content 4</td>
+                    <td>Content 5</td>
+                    <td>Content 6</td>
+                </tr>
+                <tr>
+                    <td>Content 7</td>
+                    <td>Content 8</td>
+                    <td>Content 9</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2024 Newspaper, All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
